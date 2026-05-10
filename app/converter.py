@@ -29,13 +29,6 @@ factor = {
     "light_minute": Decimal("17987547480"),
     "light_hour":   Decimal("1079252848800"),
     "light_year":   Decimal("9460730472580800"),
-
-    # Scientific
-    "angstrom":     Decimal("1e-10"),
-
-    # Typography
-    "point":        Decimal("0.0003527777777777777777777778"),
-    "pica":         Decimal("0.004233333333333333333333333"),
 }
 
 def convert(value, from_unit, to_unit, round_to=10):
