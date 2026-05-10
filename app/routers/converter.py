@@ -1,7 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from app.registry import converters
-from app.models import ConvertResponse
-
+from ..registry import converters
+from ..models import ConvertResponse
 router = APIRouter()
 
 @router.get("/{category}/convert")
