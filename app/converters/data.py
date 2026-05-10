@@ -35,38 +35,32 @@ factor = {
 aliases = {
     # basic
     "b": "bit",
-    "B": "byte",
+    "byte": "byte",
 
     # binary
     "kb": "kilobit",
     "kib": "kilobit",
-
-    "kB": "kilobyte",
+    "kilobyte": "kilobyte",
 
     "mb": "megabit",
     "mib": "megabit",
-
-    "MB": "megabyte",
+    "megabyte": "megabyte",
 
     "gb": "gigabit",
     "gib": "gigabit",
-
-    "GB": "gigabyte",
+    "gigabyte": "gigabyte",
 
     "tb": "terabit",
     "tib": "terabit",
-
-    "TB": "terabyte",
+    "terabyte": "terabyte",
 
     "pb": "petabit",
     "pib": "petabit",
-
-    "PB": "petabyte",
+    "petabyte": "petabyte",
 
     "eb": "exabit",
     "eib": "exabit",
-
-    "EB": "exabyte",
+    "exabyte": "exabyte",
 }
 
 def convert(value, from_unit, to_unit, round_to=10):

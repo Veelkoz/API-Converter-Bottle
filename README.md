@@ -391,24 +391,24 @@ Convert bits, bytes, kilobytes, megabytes, gigabytes, terabytes, and more.
 
 - bit (b)
 - nibble
-- byte (B)
+- byte (byte)
 - character
 - word
 - double_word
 - quadruple_word
 - block
 - kilobit (kb, kib)
-- kilobyte (kB)
+- kilobyte (kilobyte)
 - megabit (mb, mib)
-- megabyte (MB)
+- megabyte (megabyte)
 - gigabit (gb, gib)
-- gigabyte (GB)
+- gigabyte (gigabyte)
 - terabit (tb, tib)
-- terabyte (TB)
+- terabyte (terabyte)
 - petabit (pb, pib)
-- petabyte (PB)
+- petabyte (petabyte)
 - exabit (eb, eib)
-- exabyte (EB)
+- exabyte (exabyte)
 
 **Example:**
 ```bash
