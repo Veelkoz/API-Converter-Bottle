@@ -13,7 +13,7 @@ factor = {
     "ounce":            0.028349523125,
     "carrat":           0.0002,
     "atomic_mass_unit": 1.66053906660e-27,
-    "stone":         6.35029318,
+    "stone":            6.35029318,
     "grain":            6.479891E-5	
 }
 

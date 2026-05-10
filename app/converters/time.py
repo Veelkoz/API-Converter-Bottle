@@ -2,7 +2,7 @@ from app.converters.base import convert as base_convert
 
 factor = {
     "second":       1,
-    "millisecond":   0.001,
+    "millisecond":  0.001,
     "microsecond":  0.000001,
     "nanosecond":   1.E-9,
     "picosecond":   1.E-12,
