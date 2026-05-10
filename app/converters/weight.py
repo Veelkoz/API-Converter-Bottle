@@ -17,5 +17,32 @@ factor = {
     "grain":            6.479891E-5	
 }
 
+aliases = {
+    "kg": "kilogram",
+    "g": "gram",
+    "mg": "milligram",
+    "ug": "microgram",
+    "μg": "microgram",
+    "mcg": "microgram",
+    "ng": "nanogram",
+    "t": "metric_ton",
+    "lb": "pound",
+    "lbs": "pound",
+    "oz": "ounce",
+    "ct": "carrat",
+    "amu": "atomic_mass_unit",
+    "u": "atomic_mass_unit",
+    "da": "atomic_mass_unit",
+    "st": "stone",
+    "gr": "grain",
+}
+
 def convert(value, from_unit, to_unit, round_to=10):
-    return base_convert(factor, value, from_unit, to_unit, round_to)
+    return base_convert(
+        factor,
+        aliases,
+        value,
+        from_unit,
+        to_unit,
+        round_to
+    )

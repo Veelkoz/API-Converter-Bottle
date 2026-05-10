@@ -16,5 +16,41 @@ factor = {
 
 }
 
+aliases = {
+    "m2": "square_meter",
+    "sqm": "square_meter",
+
+    "km2": "square_kilometer",
+
+    "cm2": "square_centimeter",
+
+    "mm2": "square_millimeter",
+
+    "um2": "square_micrometer",
+    "μm2": "square_micrometer",
+
+    "ha": "hectare",
+
+    "mi2": "square_mile",
+
+    "yd2": "square_yard",
+
+    "ft2": "square_foot",
+    "sqft": "square_foot",
+
+    "in2": "square_inch",
+
+    "ac": "acre",
+
+    "nmi2": "square_nautical_mile",
+}
+
 def convert(value, from_unit, to_unit, round_to=10):
-    return base_convert(factor, value, from_unit, to_unit, round_to)
+    return base_convert(
+        factor,
+        aliases,
+        value,
+        from_unit,
+        to_unit,
+        round_to
+    )

@@ -24,6 +24,42 @@ factor = {
     "light_hour":   1079252848800,
     "light_year":   9460730472580800,
 }
+aliases = {
+    "m": "meter",
+    "km": "kilometer",
+    "dm": "decimeter",
+    "cm": "centimeter",
+    "mm": "millimeter",
+
+    "um": "micrometer",
+    "μm": "micrometer",
+
+    "nm": "nanometer",
+    "pm": "picometer",
+
+    "mi": "mile",
+    "yd": "yard",
+    "ft": "foot",
+    "in": "inch",
+
+    "mil": "thou",
+
+    "nmi": "nautical_mile",
+
+    "au": "au",
+
+    "ls": "light_second",
+    "lm": "light_minute",
+    "lh": "light_hour",
+    "ly": "light_year",
+}
 
 def convert(value, from_unit, to_unit, round_to=10):
-    return base_convert(factor, value, from_unit, to_unit, round_to)
+    return base_convert(
+        factor,
+        aliases,
+        value,
+        from_unit,
+        to_unit,
+        round_to
+    )
