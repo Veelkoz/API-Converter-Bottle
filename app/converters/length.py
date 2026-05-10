@@ -46,8 +46,6 @@ aliases = {
 
     "nmi": "nautical_mile",
 
-    "au": "au",
-
     "ls": "light_second",
     "lm": "light_minute",
     "lh": "light_hour",

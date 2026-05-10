@@ -11,7 +11,7 @@ factor = {
     "short_ton":        907.18474,
     "pound":            0.45359237,
     "ounce":            0.028349523125,
-    "carrat":           0.0002,
+    "carat":           0.0002,
     "atomic_mass_unit": 1.66053906660e-27,
     "stone":            6.35029318,
     "grain":            6.479891E-5	
@@ -29,7 +29,7 @@ aliases = {
     "lb": "pound",
     "lbs": "pound",
     "oz": "ounce",
-    "ct": "carrat",
+    "ct": "carat",
     "amu": "atomic_mass_unit",
     "u": "atomic_mass_unit",
     "da": "atomic_mass_unit",

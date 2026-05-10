@@ -16,31 +16,23 @@ factor = {
     "psi":             6894.7572931783,
     "ksi":             6894757.2931783,
 
-    "newton_per_square_meter": 1.0,
-
     "millimeter_mercury": 133.322,
     "inch_mercury":       3386.389,
 
     "millimeter_water": 9.80638,
     "inch_water":      249.082,
 }
+
 aliases = {
     "pa": "pascal",
     "kpa": "kilopascal",
     "mpa": "megapascal",
     "gpa": "gigapascal",
 
-    "bar": "bar",
     "mbar": "millibar",
     "hpa": "hectopascal",
 
     "atm": "atmosphere",
-    "torr": "torr",
-
-    "psi": "psi",
-    "ksi": "ksi",
-
-    "n/m2": "newton_per_square_meter",
 
     "mmhg": "millimeter_mercury",
     "inhg": "inch_mercury",

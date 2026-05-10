@@ -30,13 +30,6 @@ factor = {
     "exabit":          1152921504606846976.0,
     "exabyte":         9223372036854775808.0,
 
-    # decimal SI units
-    "kilobyte_decimal": 8000.0,
-    "megabyte_decimal": 8000000.0,
-    "gigabyte_decimal": 8000000000.0,
-    "terabyte_decimal": 8000000000000.0,
-    "petabyte_decimal": 8000000000000000.0,
-    "exabyte_decimal": 8000000000000000000.0,
 }
 
 aliases = {
@@ -74,14 +67,6 @@ aliases = {
     "eib": "exabit",
 
     "EB": "exabyte",
-
-    # decimal byte units
-    "kb_decimal": "kilobyte_decimal",
-    "mb_decimal": "megabyte_decimal",
-    "gb_decimal": "gigabyte_decimal",
-    "tb_decimal": "terabyte_decimal",
-    "pb_decimal": "petabyte_decimal",
-    "eb_decimal": "exabyte_decimal",
 }
 
 def convert(value, from_unit, to_unit, round_to=10):

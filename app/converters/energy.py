@@ -37,6 +37,7 @@ aliases = {
     "wh": "watt_hour",
     "kwh": "kilowatt_hour",
     "mwh": "megawatt_hour",
+    "gwh": "gigawatt_hour",
 
     "cal": "calorie",
     "kcal": "kilocalorie",

@@ -55,7 +55,7 @@ aliases = {
 
     "kt": "knot",
     "kn": "knot",
-    "c": "speed_of_light",
+    "sol": "speed_of_light",
 
     "mach": "mach_air_20c",
 }
