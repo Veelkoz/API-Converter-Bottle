@@ -8,6 +8,8 @@ from .converters import (
     pressure,
     energy,
     data,
+    force,
+    power,
 )
 
 converters = {
@@ -20,4 +22,6 @@ converters = {
     "pressure": pressure,
     "energy": energy,
     "data": data,
+    "force": force,
+    "power": power,
 }

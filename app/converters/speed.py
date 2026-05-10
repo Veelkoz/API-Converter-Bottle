@@ -28,5 +28,44 @@ factor = {
     "mach_air_20c":                 343.6,
 }
 
+aliases = {
+    "m/s": "meter_per_second",
+    "mps": "meter_per_second",
+    "m/min": "meter_per_minute",
+    "m/h": "meter_per_hour",
+
+    "km/s": "kilometer_per_second",
+    "km/min": "kilometer_per_minute",
+    "km/h": "kilometer_per_hour",
+    "kph": "kilometer_per_hour",
+
+    "mi/s": "mile_per_second",
+    "mi/min": "mile_per_minute",
+    "mi/h": "mile_per_hour",
+    "mph": "mile_per_hour",
+
+    "ft/s": "foot_per_second",
+    "fps": "foot_per_second",
+    "ft/min": "foot_per_minute",
+    "ft/h": "foot_per_hour",
+
+    "yd/s": "yard_per_second",
+    "yd/min": "yard_per_minute",
+    "yd/h": "yard_per_hour",
+
+    "kt": "knot",
+    "kn": "knot",
+    "sol": "speed_of_light",
+
+    "mach": "mach_air_20c",
+}
+
 def convert(value, from_unit, to_unit, round_to=10):
-    return base_convert(factor, value, from_unit, to_unit, round_to)
+    return base_convert(
+        factor,
+        aliases,
+        value,
+        from_unit,
+        to_unit,
+        round_to
+    )

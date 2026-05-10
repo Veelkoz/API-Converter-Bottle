@@ -14,5 +14,30 @@ factor = {
     "year":         31557600        #average year 365.25 days
 }
 
+aliases = {
+    "s": "second",
+    "sec": "second",
+    "ms": "millisecond",
+    "us": "microsecond",
+    "μs": "microsecond",
+    "ns": "nanosecond",
+    "ps": "picosecond",
+    "min": "minute",
+    "h": "hour",
+    "hr": "hour",
+    "d": "day",
+    "wk": "week",
+    "mo": "month",
+    "y": "year",
+    "yr": "year",
+}
+
 def convert(value, from_unit, to_unit, round_to=10):
-    return base_convert(factor, value, from_unit, to_unit, round_to)
+    return base_convert(
+        factor,
+        aliases,
+        value,
+        from_unit,
+        to_unit,
+        round_to
+    )

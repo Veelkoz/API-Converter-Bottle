@@ -26,5 +26,36 @@ factor = {
     "cubic_inch":               0.0000163871
 }
 
+aliases = {
+    "m3": "cubic_meter",
+    "km3": "cubic_kilometer",
+    "cm3": "cubic_centimeter",
+    "mm3": "cubic_millimeter",
+    "l": "liter",
+    "ml": "milliliter",
+    "gal": "gallon_us",
+    "qt": "quart_us",
+    "pt": "pint_us",
+    "cup": "cup_us",
+    "floz": "fluid_ounce_us",
+    "tbsp": "table_spoon_us",
+    "tsp": "tea_spoon_us",
+    "igal": "gallon_imperial",
+    "iqt": "quart_imperial",
+    "ipt": "pint_imperial",
+    "ifloz": "fluid_ounce_imperial",
+    "mi3": "cubic_mile",
+    "yd3": "cubic_yard",
+    "ft3": "cubic_foot",
+    "in3": "cubic_inch",
+}
+
 def convert(value, from_unit, to_unit, round_to=10):
-    return base_convert(factor, value, from_unit, to_unit, round_to)
+    return base_convert(
+        factor,
+        aliases,
+        value,
+        from_unit,
+        to_unit,
+        round_to
+    )
