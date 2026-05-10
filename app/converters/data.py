@@ -1,8 +1,6 @@
-from decimal import Decimal, getcontext
-
-getcontext().prec = 100
+from app.converters.base import convert as base_convert
 
 factor = {}
 
 def convert(value, from_unit, to_unit, round_to=10):
-    raise NotImplementedError
+    return base_convert(factor, value, from_unit, to_unit, round_to)
