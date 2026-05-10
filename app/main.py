@@ -1,9 +1,6 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from decimal import Decimal
-from converter import convert
-from models import ConvertResponse
-
+from app.routers.converter import router
 
 app = FastAPI()
 
@@ -16,21 +13,6 @@ app.add_middleware(
 
 @app.get("/health")
 def health():
-    return{"status": "ok"}
+    return {"status": "ok"}
 
-@app.get("/convert")
-def convert_endpoint(
-    value: str,
-    from_unit: str,
-    to_unit: str,
-    round_to: int = 10
-):
-    try:
-        return ConvertResponse(
-            result=convert(Decimal(value), from_unit, to_unit, round_to),
-            from_unit=from_unit,
-            to_unit=to_unit,
-            input=float(Decimal(value))
-        )
-    except ValueError as e:
-        raise HTTPException(status_code=422, detail=str(e))
+app.include_router(router)
