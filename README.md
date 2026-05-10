@@ -53,6 +53,58 @@ curl "https://api-converter-bottle.onrender.com/length/convert?value=1&from_unit
 
 ---
 
+## All Endpoints
+
+| Method | Endpoint | Description | Query Parameters |
+|--------|----------|-------------|------------------|
+| GET | `/{category}/convert` | Convert between units | `value` (float), `from_unit` (string), `to_unit` (string), `round_to` (int, default 10) |
+| GET | `/categories` | List all available categories | — |
+| GET | `/categories/{category}/units` | Get units and aliases for a category | — |
+| GET | `/health` | Health check | — |
+| GET | `/` | Redirect to API docs | — |
+
+---
+
+## Discovery Endpoints
+
+Programmatically discover available categories and units without hardcoding them.
+
+### List All Categories
+
+```bash
+curl "https://api-converter-bottle.onrender.com/categories"
+```
+
+**Response:**
+```json
+["length", "weight", "area", "volume", "time", "temperature", "speed", "pressure", "energy", "data"]
+```
+
+### Get Units & Aliases for a Category
+
+```bash
+curl "https://api-converter-bottle.onrender.com/categories/length/units"
+```
+
+**Response:**
+```json
+{
+  "units": ["meter", "kilometer", "mile", "foot", "inch", ...],
+  "aliases": {
+    "m": "meter",
+    "km": "kilometer",
+    "mi": "mile",
+    "ft": "foot",
+    "in": "inch",
+    ...
+  }
+}
+```
+
+Perfect for building dynamic UIs or validating input before calling the conversion endpoint.
+
+---
+
 ## Categories & Units
 
 ### 1. Length
