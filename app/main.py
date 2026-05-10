@@ -1,9 +1,6 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from decimal import Decimal
-from converter import convert
-from models import ConvertResponse
-
+from .routers import length, weight, temperature, volume, area, time, speed, pressure, energy, data
 
 app = FastAPI()
 
@@ -16,21 +13,16 @@ app.add_middleware(
 
 @app.get("/health")
 def health():
-    return{"status": "ok"}
+    return {"status": "ok"}
 
-@app.get("/convert")
-def convert_endpoint(
-    value: str,
-    from_unit: str,
-    to_unit: str,
-    round_to: int = 10
-):
-    try:
-        return ConvertResponse(
-            result=convert(Decimal(value), from_unit, to_unit, round_to),
-            from_unit=from_unit,
-            to_unit=to_unit,
-            input=float(Decimal(value))
-        )
-    except ValueError as e:
-        raise HTTPException(status_code=422, detail=str(e))
+# Register routers with prefixes
+app.include_router(length.router, prefix="/length", tags=["length"])
+app.include_router(weight.router, prefix="/weight", tags=["weight"])
+app.include_router(temperature.router, prefix="/temperature", tags=["temperature"])
+app.include_router(volume.router, prefix="/volume", tags=["volume"])
+app.include_router(area.router, prefix="/area", tags=["area"])
+app.include_router(time.router, prefix="/time", tags=["time"])
+app.include_router(speed.router, prefix="/speed", tags=["speed"])
+app.include_router(pressure.router, prefix="/pressure", tags=["pressure"])
+app.include_router(energy.router, prefix="/energy", tags=["energy"])
+app.include_router(data.router, prefix="/data", tags=["data"])
