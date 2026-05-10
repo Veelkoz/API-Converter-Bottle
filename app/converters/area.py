@@ -1,4 +1,4 @@
-from converters.base import convert as base_convert
+from .base import convert as base_convert
 
 factor = {
     "square_meter":         1,
